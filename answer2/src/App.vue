@@ -47,7 +47,7 @@
 
                 // This is a fake api call which can be replaced with real data (0.3 sec delay).
                 setTimeout(e => {
-                    if (this.maxItems > this.items.length) {
+                    if (this.maxItems > this.items.length && this.isLoading) {
                         for (let i = 0; i < this.maxItemsAtLoad; i++) {
                             this.items = [...this.items, {
                                 uid: uniqueId(),
